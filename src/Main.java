@@ -4,6 +4,8 @@ public class Main {
 
         System.out.println(getDiffBetweenLargestSmallest(arrayTest));
         printTwoSmallests(arrayTest);
+
+        calculate(0,1);
     }
 
     /*
@@ -47,5 +49,19 @@ and prints them to the console.
             System.err.println(e.getMessage());
         }
 
+    }
+
+    /*
+    Task 3
+Write a Java method that calculates the result of the following mathematical expression,
+where x and y are two variables that have been pre-set in your code:
+x^2 +  ( (4y/5) - x )^2
+     */
+    private static void calculate(double x , double y) {
+        double z = (4*y/5)-x;
+        z *= z;
+        double xx = x*x;
+        double s = z +xx;
+        System.out.println("result = " + s);
     }
 }
