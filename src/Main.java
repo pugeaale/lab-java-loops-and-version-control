@@ -1,8 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        int[] arrayTest = { 2 , -2 , 0 , 4};
+        int[] arrayTest = { -1 , -2 , -1 ,0 , 4};
 
         System.out.println(getDiffBetweenLargestSmallest(arrayTest));
+        printTwoSmallests(arrayTest);
     }
 
     /*
@@ -22,5 +23,29 @@ public class Main {
             else if (array[i] < smallest) smallest = array[i];
         }
         return largest-smallest;
+    }
+
+    /*
+Task 2
+Write a Java method that finds the smallest and second smallest elements of a given array
+and prints them to the console.
+ */
+    private static void printTwoSmallests(int[] array) {
+        try {
+            int smallest = array[0];
+            int secondSecond = smallest;
+
+            for (int i = 1 ; i < array.length ; i++) {
+                if( array[i] < smallest  ) {
+                    secondSecond = smallest;
+                    smallest = array[i];
+                }
+                else if (array[i] < secondSecond) secondSecond = array[i];
+            }
+            System.out.println("smallest = " + smallest + " - second smallest : " + secondSecond);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+
     }
 }
