@@ -4,14 +4,15 @@ public class Main {
 
         System.out.println(getDiffBetweenLargestSmallest(arrayTest));
         printTwoSmallests(arrayTest);
-
+        calculate(1,2);
         calculate(0,1);
     }
 
-    /*
-   Write a Java method that returns the difference between the largest and smallest values
-   in an array of integers.
-   The length of the array must be at least 1.
+    /**
+     * Get the difference between the largest and smallest values
+     * in an array of integers.
+     * @param array array of integers
+     * @return difference between the largest and smallest value or -1 if array is null
      */
     private static int getDiffBetweenLargestSmallest(int[] array) {
         if( array == null || array.length == 0) {
