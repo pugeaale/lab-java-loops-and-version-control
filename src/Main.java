@@ -3,7 +3,7 @@ public class Main {
         int[] arrayTest = { -1 , -2 , -1 ,0 , 4};
 
         System.out.println(getDiffBetweenLargestSmallest(arrayTest));
-        printTwoSmallests(arrayTest);
+        printSmallestAndSecondSmallest(arrayTest);
         calculate(1,2);
         calculate(0,1);
     }
@@ -33,19 +33,19 @@ Task 2
 Write a Java method that finds the smallest and second smallest elements of a given array
 and prints them to the console.
  */
-    private static void printTwoSmallests(int[] array) {
+    private static void printSmallestAndSecondSmallest(int[] array) {
         try {
             int smallest = array[0];
-            int secondSecond = smallest;
+            int secondSmallest = smallest;
 
             for (int i = 1 ; i < array.length ; i++) {
                 if( array[i] < smallest  ) {
-                    secondSecond = smallest;
+                    secondSmallest = smallest;
                     smallest = array[i];
                 }
-                else if (array[i] < secondSecond) secondSecond = array[i];
+                else if (array[i] < secondSmallest) secondSmallest = array[i];
             }
-            System.out.println("smallest = " + smallest + " - second smallest : " + secondSecond);
+            System.out.println("smallest = " + smallest + " - second smallest : " + secondSmallest);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
