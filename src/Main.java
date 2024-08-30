@@ -56,18 +56,14 @@ public class Main {
      * Calculate the result of the following mathematical expression,
      * where x and y are two variables that have been pre-set in your code:
      * x^2 +  ( (4y/5) - x )^2
-     * @param x
-     * @param y
+     * @param x double variable of the formula
+     * @param y double variable of the formula
      * @return the result of the formula
      */
     private static double calculateFormulaTask3(double x , double y) {
         // calculate the parenthesis
         double parenthesis = (4*y/5)-x;
-        // calculate the pow of the parenthesis
-        parenthesis *= parenthesis;
-        //calculate the pow of x
-        double xPow = x*x;
-        // return the result, sum of the pows
-        return parenthesis + xPow;
+        // return sum of x Pow and parenthesis Pow
+        return x*x + parenthesis*parenthesis;
     }
 }
