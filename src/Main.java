@@ -28,11 +28,10 @@ public class Main {
         return largest-smallest;
     }
 
-    /*
-Task 2
-Write a Java method that finds the smallest and second smallest elements of a given array
-and prints them to the console.
- */
+    /**
+     * Print to the console the smallest value and the second-smallest value of an array
+     * @param array array of integers
+     */
     private static void printSmallestAndSecondSmallest(int[] array) {
         try {
             int smallest = array[0];
