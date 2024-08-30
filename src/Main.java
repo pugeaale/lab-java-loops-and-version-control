@@ -4,8 +4,9 @@ public class Main {
 
         System.out.println(getDiffBetweenLargestSmallest(arrayTest));
         printSmallestAndSecondSmallest(arrayTest);
-        calculate(1,2);
-        calculate(0,1);
+
+        System.out.println("result = " + calculateFormulaTask3(1,2));
+        System.out.println("result = " + calculateFormulaTask3(0,1));
     }
 
     /**
@@ -57,11 +58,14 @@ Write a Java method that calculates the result of the following mathematical exp
 where x and y are two variables that have been pre-set in your code:
 x^2 +  ( (4y/5) - x )^2
      */
-    private static void calculate(double x , double y) {
-        double z = (4*y/5)-x;
-        z *= z;
-        double xx = x*x;
-        double s = z +xx;
-        System.out.println("result = " + s);
+    private static double calculateFormulaTask3(double x , double y) {
+        // calculate the parenthesis
+        double parenthesis = (4*y/5)-x;
+        // calculate the pow of the parenthesis
+        parenthesis *= parenthesis;
+        //calculate the pow of x
+        double xPow = x*x;
+        // return the result, sum of the pows
+        return parenthesis + xPow;
     }
 }
